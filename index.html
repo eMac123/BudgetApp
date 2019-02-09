@@ -1,151 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="css/budget.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <title>Budget App</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <title>Budgety</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <div class="left-pannel" id="pnlLft">
-            <div class="navigation">
-                <a href="#" id="overviewBtn"><i class="fas fa-tachometer-alt"></i>Overview</a>
-                <a href="#" id="budgetBtn"><i class="fas fa-dollar-sign"></i>Budget</a>
-                <a href="#"><i class="fas fa-award"></i>Awards</a>
-                <a href="#"><i class="fas fa-cog"></i>Settings</a>
+
+    <div class="top">
+        <div class="budget">
+            <div class="budget__title">
+                Available Budget in <span class="budget__title--month">%Month%</span>:
+            </div>
+
+            <div class="budget__value">+ 2,345.64</div>
+
+            <div class="budget__income clearfix">
+                <div class="budget__income--text">Income</div>
+                <div class="right">
+                    <div class="budget__income--value">+ 4,300.00</div>
+                    <div class="budget__income--percentage">&nbsp;</div>
+                </div>
+            </div>
+
+            <div class="budget__expenses clearfix">
+                <div class="budget__expenses--text">Expenses</div>
+                <div class="right clearfix">
+                    <div class="budget__expenses--value">- 1,954.36</div>
+                    <div class="budget__expenses--percentage">45%</div>
+                </div>
             </div>
         </div>
-        <div class="main-content">
-            <!--HEADER START HERE-->
-            <div class="header">
-                <div class="search">
-                    <i class="fas fa-search"></i>
-                    <input type="text" value="Hey Ignas what are you looking for?">
-                </div>
-                <div class="user-info">
-                    
-                        <i class="far fa-grin-squint"></i>
-                        <select name="" id="">
-                            <option value="User1">User1</option>
-                            <option value="User2">User2</option>
-                            <option value="User3">User3</option>
-                        </select>
-                    
-                    
-                </div>
-            </div>
-            <!--HEADER ENDS HERE-->
-            <!--OVERVIEW CONTENT START HERE-->
-            <div class="main-content-overview" id="overViewContainer">
-                <div class="row-Overview">
-                    <div class="text">Overview</div>
-                    <button class="btn last_month">Last Month</button>
-                    <button class="btn last-week">Last Week</button>
-                </div>
-                <div class="row-bala">
-                    <div class="current-balance card">
-
-                        <div class="card-header">
-                           <p>Current Balance</p>
-                           <p id="CurrBalance">$ 8.800.90</p>
-                        </div>
-                       
-                        <div class="card-bottom">
-                          <div class="left">
-                            <p>Acount name</p>
-                            <p id="AccName">Ignas R.</p>
-                          </div>
-                          <div class="right">
-                              <p id="date">12/20</p>
-                          </div>
-                        </div>
-                       
-                    </div>
-                    <div class="revenue card">
-                        <div class="card-header bigger">
-                            <p>Revenue</p>
-                            <p id="revenue-week-month">Last Week</p>
-                            <p id="revenueBal"> <span>$</span> 1.550.00</p>
-                        </div>
-                        <div class="card-bottom">
-                           <i class="fas fa-arrow-up"> <span> %35 </span> Usages</i>
-                           <i class="fas fa-arrow-down"> <span> %65 </span> Remaining</i>
-                        </div>
-                    </div>
-                    <div class="saving card">
-                        <div class="card-header bigger">
-                            <p>Saving</p>
-                            <p id="saving-week-month">Last Week</p>
-                            <p> <span>$</span> 260.00</p>
-                        </div>
-                        <div class="card-bottom">
-                            <i class="fas fa-arrow-up"> 15% Usages</i>
-                            <i class="fas fa-arrow-down"> 85% Remaining</i>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row-pop">
-                    <div class="popular-category bigger-card"></div>
-                    <div class="expenses bigger-card"></div>
-                    <div class="history-transaction bigger-card"></div>
-                </div>
-            </div> 
-            <!--OVERVIEW CONTENT END HERE-->
-            
-            <!--BUDGET CONTENT STARTS HERE-->
-            <div class="budget-container" id="budgetCont">
-                <div class="budget-toDo-left" id="toDo">
-
-                    <div class="add-expensive flex" id="addExp">
-                        <label for="">Write you'r expen</label>
-                        <input type="text" id="expDec">
-                        <input type="text" id="expAmount">
-                        <button type="submit" id="expenBtn" class="expensBtn">Add expensive</button>
-                    </div>
-
-                    <div class="add-income flex" id="addInc">
-                        <label for="">Write you'r income</label>
-                        <input type="text" id="incExp">
-                        <input type="text" id="incAmount">
-                        
-                        <button type="submit" id="incomBtn" class="incomeBtn">Add income</button>
-                    </div>
-                   
-                    
-
-                </div>
-                <div class="budget-main-content">
-                    <div class="income-container" id="incomCont">
-                        <ul class="collection" id="incomeList">
-                           
-                        </ul>
-                    </div>
-                    <div class="expensive-container" id="expensCont">
-                       <ul class="collection" id="expensiveList">
-                           
-                       </ul>
-                    </div>
-
-                </div>
-
-            </div>
-            <!--BUDGET CONTENT ENDS HERE-->
-        </div>
-
     </div>
 
 
 
+    <div class="bottom">
+        <div class="add">
+            <div class="add__container">
+                <select class="add__type">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" class="add__description" placeholder="Add description">
+                <input type="number" class="add__value" placeholder="Value">
+                <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+            </div>
+        </div>
 
-<script src="js/budget.js"></script>
-<script src="js/left-panel-button.js"></script>
+        <div class="container clearfix">
+            <div class="income">
+                <h2 class="income__title">Income</h2>
+
+                <div class="income__list">
+
+                    <!--
+                        <div class="item clearfix" id="income-0">
+                            <div class="item__description">Salary</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 2,100.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="item clearfix" id="income-1">
+                            <div class="item__description">Sold car</div>
+                            <div class="right clearfix">
+                                <div class="item__value">+ 1,500.00</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+
+                </div>
+            </div>
+
+
+
+            <div class="expenses">
+                <h2 class="expenses__title">Expenses</h2>
+
+                <div class="expenses__list">
+
+                    <!--
+                        <div class="item clearfix" id="expense-0">
+                            <div class="item__description">Apartment rent</div>
+                            <div class="right clearfix">
+                                <div class="item__value">- 900.00</div>
+                                <div class="item__percentage">21%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item clearfix" id="expense-1">
+                            <div class="item__description">Grocery shopping</div>
+                            <div class="right clearfix">
+                                <div class="item__value">- 435.28</div>
+                                <div class="item__percentage">10%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>
