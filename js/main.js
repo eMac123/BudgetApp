@@ -29,6 +29,8 @@ var budgetController = (function () {
 
     };
 
+    // ss aa dd
+
     Expense.prototype.getPercentage = function () {
         // use this method to return the calculated percentage
         return this.percentage;
